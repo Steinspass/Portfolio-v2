@@ -258,7 +258,7 @@ class _AboutMePageMobileState extends State<AboutMePageMobile> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 180.h,
+      height: 200.h,
       width: 100.w,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -266,12 +266,12 @@ class _AboutMePageMobileState extends State<AboutMePageMobile> {
           SizedBox(height: 2.h,),
           TextWidget(isSelectable: true, text: '// About me', padding: null, textStyle: Theme.of(context).textTheme.displayMedium,),
           SizedBox(height: 5.h,),
-          Expanded(child: Column(
+          Expanded( child: Column(
             children:[
             TextWidget(isSelectable: true, text: 'Info', padding: null, textStyle: Theme.of(context).textTheme.displaySmall,),
             SizedBox(height: 4.h,),
             SizedBox(
-              width: 80.w,
+              width: 75.w,
               child: TextWidget(
               isSelectable: true, 
               text: labelAboutMe, 
@@ -279,7 +279,8 @@ class _AboutMePageMobileState extends State<AboutMePageMobile> {
             ),
             ]
           )),
-          Expanded(child: Column(
+          
+          Expanded( child: Column(
             children:[
               TextWidget(isSelectable: true, text: 'Tech', padding: null, textStyle: Theme.of(context).textTheme.displaySmall,),
               SizedBox(height: 4.h,),

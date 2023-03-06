@@ -72,7 +72,7 @@ class _CardBigProjectWidgetState extends State<CardBigProjectWidget> {
             Expanded(
               flex: 4,
               child: widget.isMobile ?? false 
-              ? SizedBox( width: 60.w, child: TextWidget(text: widget.description, padding: const EdgeInsets.symmetric( horizontal: 55, vertical: 35 ), textStyle: Theme.of(context).textTheme.bodyMedium, isSelectable: true,))
+              ? SizedBox( width: 70.w, child: TextWidget(text: widget.description, padding: const EdgeInsets.symmetric( horizontal: 5, vertical: 5 ), textStyle: Theme.of(context).textTheme.bodyMedium, isSelectable: true,))
               : SizedBox( width: 60.w, child: TextWidget(text: widget.description, padding: const EdgeInsets.symmetric( horizontal: 75, vertical: 15 ), textStyle: Theme.of(context).textTheme.bodyMedium, isSelectable: true))
             ),
             TextWidget(text: 'Tech', padding: const EdgeInsets.all(4), textStyle: Theme.of(context).textTheme.headlineLarge, isSelectable: true),
@@ -151,7 +151,7 @@ class _CardBigProjectWidgetState extends State<CardBigProjectWidget> {
             Expanded(
               flex: 4,
               child:  widget.isMobile ?? false 
-              ? SizedBox( width: 60.w, child: TextWidget(text: widget.description, padding: const EdgeInsets.symmetric( horizontal: 55, vertical: 35 ), textStyle: Theme.of(context).textTheme.bodyMedium, isSelectable: true))
+              ? SizedBox( width: 70.w, child: TextWidget(text: widget.description, padding: const EdgeInsets.symmetric( horizontal: 5, vertical: 5 ), textStyle: Theme.of(context).textTheme.bodyMedium, isSelectable: true))
               : SizedBox( width: 60.w, child: TextWidget(text: widget.description, padding: const EdgeInsets.symmetric( horizontal: 75, vertical: 15 ), textStyle: Theme.of(context).textTheme.bodyMedium, isSelectable: true))
             ),
             TextWidget(text: 'Tech', padding: const EdgeInsets.all(4), textStyle: Theme.of(context).textTheme.headlineLarge, isSelectable: true),

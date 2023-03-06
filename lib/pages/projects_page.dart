@@ -67,7 +67,7 @@ class _ProjectsPageDesktopState extends State<ProjectsPageDesktop> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // SizedBox(width: 3.w,),
-                CardSmallProjectWidget(description: labelSmallProject1, title: 'Portfolio v2', onTap: (){launchUrlString("");} ),
+                CardSmallProjectWidget(description: labelSmallProject1, title: 'Portfolio v2', onTap: (){launchUrlString("https://github.com/Steinspass/Portfolio-v2");} ),
                 CardSmallProjectWidget(description:labelSmallProject2, title: 'Flask Neuronal Network API', onTap: (){launchUrlString("https://github.com/Steinspass/flask_neural_network_api");} ),
                 CardSmallProjectWidget(description:labelSmallProject3, title: 'Sketch Generator App', onTap: (){launchUrlString("https://github.com/Steinspass/sketch_generator_shoes_app");} ),
                 CardSmallProjectWidget(description:labelSmallProject4, title: 'Text Sentiment Analysis App', onTap: (){launchUrlString("https://github.com/Steinspass/sentiment_analysis_app");} ),
@@ -127,7 +127,7 @@ class _ProjectsPageTabletState extends State<ProjectsPageTablet> {
                   child: Row(
                     children: [
                       SizedBox(width: 4.w,),
-                      Expanded(child: CardSmallProjectWidget(width: 35.w, height: 35.h, description:labelSmallProject1 ,title: 'Portfolio v2', onTap: (){launchUrlString("");} )),
+                      Expanded(child: CardSmallProjectWidget(width: 35.w, height: 35.h, description:labelSmallProject1 ,title: 'Portfolio v2', onTap: (){launchUrlString("https://github.com/Steinspass/Portfolio-v2");} )),
                       Expanded(child: CardSmallProjectWidget(width: 35.w, height: 35.h, description:labelSmallProject2 ,title: 'Flask Neuronal Network API', onTap: (){launchUrlString("https://github.com/Steinspass/flask_neural_network_api");} )),
                       SizedBox(width: 4.w,),
                     ],
@@ -195,10 +195,10 @@ class _ProjectsPageMobileState extends State<ProjectsPageMobile> {
               children: [
                 // SizedBox(width: 1.h,),
                 // SizedBox(width: 4.w,),
-                Expanded(child: CardSmallProjectWidget(width: 72.w, height: 20.h, description:labelSmallProject1, title: 'Portfolio v2', onTap: (){launchUrlString("");} )),
-                Expanded(child: CardSmallProjectWidget(width: 72.w, height: 20.h, description:labelSmallProject2, title: 'Flask Neuronal Network API', onTap: (){launchUrlString("https://github.com/Steinspass/flask_neural_network_api");} )),
-                Expanded(child: CardSmallProjectWidget(width: 72.w, height: 20.h, description:labelSmallProject3, title: 'Sketch Generator App', onTap: (){launchUrlString("https://github.com/Steinspass/sketch_generator_shoes_app");} )),
-                Expanded(child: CardSmallProjectWidget(width: 72.w, height: 20.h, description:labelSmallProject4, title: 'Text Sentiment Analysis App', onTap: (){launchUrlString("https://github.com/Steinspass/sentiment_analysis_app");} )),
+                Expanded(child: CardSmallProjectWidget(width: 72.w, height: 24.h, description:labelSmallProject1, title: 'Portfolio v2', onTap: (){launchUrlString("https://github.com/Steinspass/Portfolio-v2");} )),
+                Expanded(child: CardSmallProjectWidget(width: 72.w, height: 24.h, description:labelSmallProject2, title: 'Flask Neuronal Network API', onTap: (){launchUrlString("https://github.com/Steinspass/flask_neural_network_api");} )),
+                Expanded(child: CardSmallProjectWidget(width: 72.w, height: 24.h, description:labelSmallProject3, title: 'Sketch Generator App', onTap: (){launchUrlString("https://github.com/Steinspass/sketch_generator_shoes_app");} )),
+                Expanded(child: CardSmallProjectWidget(width: 72.w, height: 24.h, description:labelSmallProject4, title: 'Text Sentiment Analysis App', onTap: (){launchUrlString("https://github.com/Steinspass/sentiment_analysis_app");} )),
                 SizedBox(height: 3.h,),
               ],
           )),
@@ -243,7 +243,7 @@ final List<Widget> weMakerKeys = [
 
 
 const String labelSmallProject1 = "Second version of my portfolio using custom minimalistic Material 3 for theme.";
-const String labelSmallProject2 = "Python using Flask, neural network model based on the pix2pix model, returning a realistic image from a sketch.";
+const String labelSmallProject2 = "Python using Flask, neural network model based on the pix2pix model.";
 const String labelSmallProject3 = "App where you can draw a sketch and calling an API with a pix2pix model is capable of returning a realistic image.";
 const String labelSmallProject4 = "App that from the text using a natural language processing is able to identify the sentiments in the text.";
 
