@@ -11,26 +11,20 @@ Widget responsiveWidgetLayout(
     final sizeWidth = MediaQuery.of(context).size.width;
 
 
-    if(sizeWidth > 1024){
+    if(sizeWidth >= 1024){
 
       return desktopL ?? const SizedBox.shrink();
 
-    }
-
-    if(sizeWidth >= 800 && sizeWidth <= 1200){
+    }else if(sizeWidth >= 700){
       
       return tabletL ?? const SizedBox.shrink();
       
-    }
-
-    if(sizeWidth <= 800){
+    }else if(sizeWidth <= 450){
 
       return mobileL ?? const SizedBox.shrink();
 
+    }else{
+      return mobileL!;
     }
-
-    
-    return const SizedBox.shrink();
-
 
 }

@@ -57,7 +57,7 @@ class _RowButtonsSocialIconsState extends State<RowButtonsSocialIcons> {
       children: [
         IconButtonWidget(tooltip: 'Github', icon: BoxIcons.bxl_github, onTap: () => launchUrlString("https://github.com/Steinspass"),),
         SizedBox(width: 2.w,),
-        IconButtonWidget(tooltip: 'Twitter', icon: BoxIcons.bxl_twitter, onTap: () => launchUrlString("https://twitter.com/SteinsPass11"),),
+        IconButtonWidget(tooltip: 'LinkedIn', icon: BoxIcons.bxl_linkedin, onTap: () => launchUrlString("https://www.linkedin.com/in/naim-dridi-podadera-23271324b"),),
         SizedBox(width: 2.w,),
         IconButtonWidget(tooltip: 'Copy the Email', icon: BoxIcons.bxl_gmail, onTap: () => Clipboard.setData( const ClipboardData(text: 'naimdp.dev@gmail.com')),),
       ],

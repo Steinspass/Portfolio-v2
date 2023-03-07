@@ -57,9 +57,9 @@ class _CardSmallProjectWidgetState extends State<CardSmallProjectWidget> {
         onHover: false,  
         widget: Column(
           children: [
-            TextWidget(text: widget.title, padding: const EdgeInsets.all(8), textStyle: Theme.of(context).textTheme.titleMedium, isSelectable: true),
+            TextWidget(text: widget.title, padding: const EdgeInsets.all(6), textStyle: Theme.of(context).textTheme.titleMedium, isSelectable: true),
             SizedBox(height: 1.h,),
-            TextWidget(text: widget.description, padding: const EdgeInsets.all(8), textStyle: Theme.of(context).textTheme.bodyMedium, isSelectable: true),
+            TextWidget(text: widget.description, padding: const EdgeInsets.all(4), textStyle: Theme.of(context).textTheme.bodyMedium, isSelectable: true),
             const Spacer(),
             const Padding(padding: EdgeInsets.only(left: 20, right: 20),child: Divider(thickness: 0.5),),
             IconBorderButtonWidget(icon: BoxIcons.bxl_github, onTap: widget.onTap, text: 'View Code',),
