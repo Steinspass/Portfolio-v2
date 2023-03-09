@@ -18,11 +18,10 @@ class _ContactPageState extends State<ContactPage> {
   
   @override
   Widget build(BuildContext context) {
-   return responsiveWidgetLayout(
-        context,
-        desktopL: const ContactPageDesktop(),
-        tabletL:  const ContactPageTablet(),
-        mobileL: const ContactPageMobile()
+   return const ResponsiveLayout(
+        desktopL: ContactPageDesktop(),
+        tabletL:  ContactPageTablet(),
+        mobileL: ContactPageMobile()
     );
   }
 }

@@ -18,11 +18,10 @@ class ProjectsPage extends StatefulWidget {
 class _ProjectsPageState extends State<ProjectsPage> {
   @override
   Widget build(BuildContext context) {
-    return responsiveWidgetLayout(
-        context,
-        desktopL: const ProjectsPageDesktop(),
-        tabletL:  const ProjectsPageTablet(),
-        mobileL: const ProjectsPageMobile()
+    return const ResponsiveLayout(
+        desktopL: ProjectsPageDesktop(),
+        tabletL:  ProjectsPageTablet(),
+        mobileL: ProjectsPageMobile()
     );
   }
 }
@@ -35,6 +34,22 @@ class ProjectsPageDesktop extends StatefulWidget {
 }
 
 class _ProjectsPageDesktopState extends State<ProjectsPageDesktop> {
+
+  late ScrollController scrollController;
+
+  @override
+  void initState() {
+    scrollController = ScrollController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    scrollController.dispose();
+    super.dispose();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -63,19 +78,23 @@ class _ProjectsPageDesktopState extends State<ProjectsPageDesktop> {
           SizedBox(height: 3.h,),
           Expanded(
             flex: 1,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // SizedBox(width: 3.w,),
-                CardSmallProjectWidget(description: labelSmallProject1, title: 'Portfolio v2', onTap: (){launchUrlString("https://github.com/Steinspass/Portfolio-v2");} ),
-                CardSmallProjectWidget(description:labelSmallProject2, title: 'Flask Neuronal Network API', onTap: (){launchUrlString("https://github.com/Steinspass/flask_neural_network_api");} ),
-                CardSmallProjectWidget(description:labelSmallProject3, title: 'Sketch Generator App', onTap: (){launchUrlString("https://github.com/Steinspass/sketch_generator_shoes_app");} ),
-                CardSmallProjectWidget(description:labelSmallProject4, title: 'Text Sentiment Analysis App', onTap: (){launchUrlString("https://github.com/Steinspass/sentiment_analysis_app");} ),
-                // SizedBox(width: 0.8.w,),
-                // CardSmallProjectWidget(description:'Mollit ullamco laborum mollit ea tempor anim excepteur' ,title: 'MBTI Test App (On working)', onTap: (){} ),
-                // SizedBox(width: 0.5.w,)
-              ],
-          )),
+            child: Center(
+              child: Scrollbar(
+                      controller: scrollController,
+                      child: ListView(
+                        controller: scrollController,
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          SizedBox(width: 2.w,),
+                          CardSmallProjectWidget(description: labelSmallProject1, title: 'Portfolio v2', onTap: (){launchUrlString("https://github.com/Steinspass/Portfolio-v2");} ),
+                          CardSmallProjectWidget(description:labelSmallProject2, title: 'Flask Neuronal Network API', onTap: (){launchUrlString("https://github.com/Steinspass/flask_neural_network_api");} ),
+                          CardSmallProjectWidget(description:labelSmallProject3, title: 'Sketch Generator App', onTap: (){launchUrlString("https://github.com/Steinspass/sketch_generator_shoes_app");} ),
+                          CardSmallProjectWidget(description:labelSmallProject4, title: 'Text Sentiment Analysis App', onTap: (){launchUrlString("https://github.com/Steinspass/sentiment_analysis_app");} ),
+                        ],
+                      ),
+                    ),
+            ),
+            ),
           SizedBox(height: 3.h,),
         ],
       ),

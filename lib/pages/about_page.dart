@@ -22,8 +22,7 @@ class _AboutMePageState extends State<AboutMePage> {
   @override
   Widget build(BuildContext context) {
 
-    return responsiveWidgetLayout(
-        context,
+    return ResponsiveLayout(
         desktopL: AboutMePageDesktop(whatTheme: widget.whatTheme),
         tabletL:  AboutMePageTablet(whatTheme: widget.whatTheme),
         mobileL:  AboutMePageMobile(whatTheme: widget.whatTheme)
@@ -65,7 +64,7 @@ class _AboutMePageDesktopState extends State<AboutMePageDesktop> {
             TextWidget(isSelectable: true, text: 'Info', padding: null, textStyle: Theme.of(context).textTheme.displaySmall,),
             SizedBox(height: 2.h,),
             SizedBox(
-              width: 35.w,
+              width: 45.w,
               child: TextWidget(
               isSelectable: true, 
               text: labelAboutMe,

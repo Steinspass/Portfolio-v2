@@ -21,8 +21,7 @@ class _HeaderPageState extends State<HeaderPage> {
   @override
   Widget build(BuildContext context) {
     
-    return responsiveWidgetLayout(
-        context,
+    return ResponsiveLayout(
         desktopL: HeaderPageDesktop(onTap: widget.onTap),
         tabletL:  HeaderPageTablet(onTap: widget.onTap),
         mobileL:  HeaderPageMobile(onTap: widget.onTap)
